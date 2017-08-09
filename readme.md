@@ -1,7 +1,7 @@
 Felipe Hernandez / Aug. 09, 2017
 
 # Project 1: Game Proposal
-##Arcade retro game
+## Arcade retro game
 
 ### About my project:
 
