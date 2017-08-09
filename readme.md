@@ -35,6 +35,28 @@ I anticipate challenges at using javascript classes and objects to structure my 
 
 ### Phases of Completion
 
+Phase 0:
+- Draw on paper the main game screen
+- Source digital images
+
+Phase 1:
+- Create a directory of assets: css, js, images
+- Make a static layout of the game on the browser:
+- CSS styling - writing CSS file
+
+Phase 2:
+- Start a javascript file
+- Add basic functionality of motion to main characters
+- Add secondary characters
+
+Phase 3:
+- Determine each characters’ data type. Some may benefit from being js classes while others objects literals, or arrays, simple variables …?
+- Develop more complex javascript functionality, such as the deploying of objects to be catch, and how the player would catch the object.
+
+Phase 4:
+- Testing and adjustments
+- Add additional screens and sound effects
+
 Most necessary:
 A welcome page with a start or display-instructions button.
 An instruction page
@@ -42,7 +64,7 @@ An enter-player-name page with start button
 A score board and a timer at the top of the screen when players are playing the game.
 A screen displaying the score and a button to restart or quit the game after game is over
 
-Add-ons;
+Add-ons:
 A screen to mark the passing from one level to the other.
 Sound effects to signal catching, throwing, and/or game over/game begins. 
 
