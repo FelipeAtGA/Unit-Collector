@@ -19,11 +19,11 @@ There is no way to choose a level. The player has to start from level 1 and make
 
 The player scores every time he/she catch an object, as well as when he/she goes up one level. Score history is saved so that players can see the top player. 
 
-## Wireframe
+### Wireframe
 
 [work in progress]
 
-## Initial thoughts on game structure
+### Initial thoughts on game structure
 
 The graphics and images of the game will be inspired by the Super Mario Bros. game. It will be a 2D game that will be played either horizontally or vertically. The player, for example, is at the bottom of the page moving left to right catching objects that are thrown down randomly from anywhere on the top of the screen from left to right as well. Most objects have to be caught, but a few aren’t to be catch because can take points away from the player.
 
@@ -32,7 +32,7 @@ I am thinking of using html5 canvas to draw dynamically on the screen, but I wil
 I anticipate challenges at using javascript classes and objects to structure my game, yet that’s my goal.
 
 
-## Phases of Completion
+### Phases of Completion
 
 Most necessary:
 A welcome page with a start or display-instructions button.
@@ -45,7 +45,7 @@ Add-ons;
 A screen to mark the passing from one level to the other.
 Sound effects to signal catching, throwing, and/or game over/game begins. 
 
-## Links and Resources
+### Links and Resources
 
 These are the initial sources for game inspiration and development:
 
