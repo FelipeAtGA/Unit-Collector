@@ -1,7 +1,8 @@
 Felipe Hernandez / Aug. 09, 2017
 
 # Project 1: Game Proposal
-## Arcade retro game
+## Arcade retro game Kaboom/Lost Luggage
+[Kaboom image](https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/blob/master/img/kaboomScreenshot.png)
 
 ### About my project:
 
