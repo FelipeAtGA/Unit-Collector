@@ -59,15 +59,15 @@ Phase 4:
 - Add additional screens and sound effects
 
 Most necessary:
-A welcome page with a start or display-instructions button.
-An instruction page
-An enter-player-name page with start button
-A score board and a timer at the top of the screen when players are playing the game.
-A screen displaying the score and a button to restart or quit the game after game is over
+- A welcome page with a start or display-instructions button.
+- An instruction page
+- An enter-player-name page with start button
+- A score board and a timer at the top of the screen when players are playing the game.
+- A screen displaying the score and a button to restart or quit the game after game is over
 
 Add-ons:
-A screen to mark the passing from one level to the other.
-Sound effects to signal catching, throwing, and/or game over/game begins. 
+- A screen to mark the passing from one level to the other.
+- Sound effects to signal catching, throwing, and/or game over/game begins. 
 
 ### Links and Resources
 
