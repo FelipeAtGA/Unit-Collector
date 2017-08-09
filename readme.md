@@ -37,6 +37,7 @@ I anticipate challenges at using javascript classes and objects to structure my 
 
 Phase 0:
 - Draw on paper the main game screen
+- Wireframming
 - Source digital images
 
 Phase 1:
