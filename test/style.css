@@ -23,13 +23,8 @@ footer{
 	background-color: gray;
 }
 
-#enemy{
-	width:50px;
-	height: 50px;
-	background-color: red;
-	position: relative;
-	left: 250px;
-	top: 560px;
+h3{
+	display: inline-block;
 }
 
 #player{
@@ -39,4 +34,30 @@ footer{
 	position: relative;
 	/*right: 50%;*/
 	left: 650px;
+}
+
+#score{
+	margin: 0 10px;
+	padding: 0 10px;
+}
+
+.enemy{
+	width:50px;
+	height: 50px;
+	background-color: red;
+	position: relative;
+	left: 250px;
+	top: 0px;
+}
+
+.newEnemy{
+	width:50px;
+	height: 50px;
+	background-color: red;
+	position: relative;
+	top: -130px;
+}
+
+.scoreBoard{
+	margin: 0px 10px;
 }
