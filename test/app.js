@@ -11,19 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
   var intViewportHeight = window.innerHeight - 100;
   var stopEnemyAnimation;
 
-  // var playerx = $player.getBoundingClientRect().top;
-  // var playery = $player.getBoundingClientRect().left;
-  // var playerwidth = $player.getBoundingClientRect().width;
-  // var playerheight = $player.getBoundingClientRect().top;
-
-  // var enemyx = $enemy.getBoundingClientRect().top;
-  // var enemyy = $enemy.getBoundingClientRect().left;
-  // var enemywidth = $enemy.getBoundingClientRect().width;
-  // var enemyheight = $enemy.getBoundingClientRect().top;
-
   const updatePlayer = function(){
-  	// var player = document.querySelector('#player').getBoundingClientRect();
-  	// var enemy = document.querySelector('#enemy').getBoundingClientRect();
+  var player = document.querySelector('#player').getBoundingClientRect();
+  var enemy = document.querySelector('#enemy').getBoundingClientRect();
 
     if(keyMove === 39){
 	  	move += 10;
@@ -39,12 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	  	}
 
   	}
-  // 	if(playerx < enemy.x + enemywidth &&
-		// playerx + playerwidth > enemy.x &&
-		// playery < enemy.y + enemy.height &&
-		// playerheight + playery > enemy.y){
-		// alert('Collision...!');
-  //   }
+  	if(player.left < enemy.left + enemy.width &&
+		player.left + player.width > enemy.left &&
+		player.top < enemy.top + enemy.height &&
+		player.height + player.top > enemy.top){
+		alert('Collision...!');
+    }
 
     //the request animation function is from:
     //https://css-tricks.com/using-requestanimationframe/
@@ -63,9 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('keydown', function(event){
   	keyMove = event.keyCode;
+  	//requestAnimationFrame(updatePlayer);
   });
 
   requestAnimationFrame(updatePlayer);
-  stopEnemyAnimation = requestAnimationFrame(updateEnemy);
+  // stopEnemyAnimation = requestAnimationFrame(updateEnemy);
 
 });
