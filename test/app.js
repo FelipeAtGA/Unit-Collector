@@ -24,13 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
   	// var enemy = document.querySelector('#enemy').getBoundingClientRect();
 
     if(keyMove === 39){
-	  	move += 10;
+	  	move += 5;
 	  	$player.css('left', move);
 	  	if(move === intViewportWidth){
 	  		move = 1330;
 	  	}
   	}else if(keyMove === 37){
-	  	move -= 10;
+	  	move -= 5;
 	  	$player.css('left', move);
 	  	if(move === 0){
 	  		move += 10;
@@ -51,14 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
   	// requestAnim = requestAnimationFrame(updatePlayer);
   };
 
-  const updateEnemy = function(){
-  	stopEnemyAnimation = requestAnimationFrame(updateEnemy);
-  	topY += 1;
-  	$enemy.css('top', topY);
-	  	if(topY > intViewportHeight){
-	  		cancelAnimationFrame(stopEnemyAnimation);
-   	  	}   	
-  };
+  // const updateEnemy = function(){
+  // 	stopEnemyAnimation = requestAnimationFrame(updateEnemy);
+  // 	topY += 1;
+  // 	$enemy.css('top', topY);
+	 //  	if(topY > intViewportHeight){
+	 //  		cancelAnimationFrame(stopEnemyAnimation);
+  //  	  	}   	
+  // };
 
 
   document.addEventListener('keydown', function(event){
