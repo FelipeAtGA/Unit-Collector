@@ -7,10 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
   var $header = $('header');
   var topY = 0;
   var move = 650;
+  var moveUp = 0;
   var keyMove;
   var requestAnim;
-  var intViewportWidth = window.innerWidth - 100;
-  var intViewportHeight = window.innerHeight - 135;
+  var intViewportWidth = window.innerWidth - 105;
+  var intViewportHeight = window.innerHeight - 140;
   var stopPlayerAnimation;
   var stopPrototypeAnimation;
   var updateScore = 0;
@@ -26,17 +27,31 @@ document.addEventListener('DOMContentLoaded', () => {
     if(keyMove === 39){
 	  	move += 5;
 	  	$player.css('left', move);
-	  	if(move === intViewportWidth){
-	  		move = 1330;
+	  	if(move >= intViewportWidth){
+	  		move = 1340;
 	  	}
   	}else if(keyMove === 37){
 	  	move -= 5;
 	  	$player.css('left', move);
 	  	if(move === 0){
-	  		move += 10;
-	  	}
+	  		move += 5;
+      }
+	  	}else if(keyMove === 38){
+        moveUp -= 5;
+        $player.css('top', moveUp);
+        if(moveUp < -575){
+          moveUp = -575;
+        }
+      }else if(keyMove === 40){
+        moveUp += 5;
+        $player.css('top', moveUp);
+        if(moveUp > 70){
+          moveUp = 70;
+        }
 
-  	}
+      }
+
+  	
   // 	if(player.left < enemy.left + enemy.width &&
 		// player.left + player.width > enemy.left &&
 		// player.top < enemy.top + enemy.height &&
