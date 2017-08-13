@@ -3,44 +3,42 @@ body{
 	background-color: #6b88fe;
 	display: flex;
 	align-items: center;
-	/*padding: 100px 0px;*/
-}
+    font-family: Inconsolata, Helvetica, sans-serif;}
 
 header{
-	/*background-color: #f4a944;*/
-	/*width: 100%;*/
-	/*height: 30px;*/
-	/*margin: 0 auto;*/
-	padding: 20px 0px;
-	top:2px;
+	width: 25%;
 }
 
 main{
-	/*background-color: transparent;*/
 	width: 50%;
 	margin: 0 auto;
 }
 
 footer{
-	width: 100%;
+	width: 25%;
 	height: 82px;
 	padding: 20px 0px;
-	background-color: transparent;
 }
 
 h1{
-	color: #f4a944;
-	font-size: 4em;
+	color: chartreuse;
+	font-size: 5em;
 }
 
 h3{
 	display: inline-block;
-	display: inline-block;
     background-color: yellow;
-    width: 100px;
+    width: 150px;
     text-align: center;
-    padding: 10px;
-    border-radius: 25px;
+    padding: 20px;
+    border-radius: 50px;
+    color: brown;
+    font-size: 2em;
+}
+
+h3:hover{
+    background-color: purple;
+    color: yellow;
 }
 
 #player{
@@ -57,20 +55,6 @@ h3{
 	padding: 0 10px;
 }
 
-/*@keyframes move {
-    0%   {top: 0px;}
-    100% {top: 600px;}
-}*/
-
-/*.enemy{
-	width:50px;
-	height: 50px;
-	background-color: red;
-	position: relative;
-	left: 250px;
-	top: 0px;
-}*/
-
 .center{
 	text-align: center;
 }
@@ -81,14 +65,63 @@ h3{
 	height: 60px;
 	background-image: url("bomb.png");
 	position: relative;
-	/*top: -130px;*/
-	/*animation-name: move;*/
-	/*animation-duration: 4s;*/
 }
 
 .scoreBoard{
 	margin: 0px 10px;
 }
+
+.shadow{
+	box-shadow: 5px 5px 5px #444;
+}
+
+.shadowT{
+	text-shadow: 5px 5px 5px #444;
+}
+
+.bmb {-webkit-animation: rotation 2s infinite linear;}
+
+@keyframes rotation {
+from {-webkit-transform: rotate(0deg);}
+to {-webkit-transform: rotate(359deg);}
+}
+
+/*
+Shake function from:
+https://codepen.io/GhostRider/pen/FctLB?editors=0100;
+*/
+@-webkit-keyframes shake {
+	0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+	10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+	30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+	40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+	50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+	70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+	80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+#bmb1 {
+	-webkit-animation-name: shake;
+	-webkit-animation-duration: 0.12s;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: 33;
+	-webkit-animation-timing-function: linear;
+}
+
+#bmb3 {
+	-webkit-animation-name: shake;
+	-webkit-animation-duration: 0.12s;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: 33;
+	-webkit-animation-timing-function: steps(3, start);
+}
+
+
+
+
 
 
 
