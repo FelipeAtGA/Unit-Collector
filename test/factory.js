@@ -10,7 +10,7 @@ class MakeEnemy{
 	constructor(){
 		this.enemy = $('<div>');
 		this.enemy.addClass('newEnemy');
-		this.topDown = 0;
+		// this.topDown = 0;
 	}
 
 	randomLeft(){
@@ -81,6 +81,7 @@ MakeEnemy.prototype.collision = function(){
   		updateScore2 += 10;
   		$score.html(' ' + updateScore2);
   		$newEnemy.css('display', 'none');
+  		deployEnemies();
   		// cancelAnimationFrame(requestAnim);
   	    // cancelAnimationFrame(stopEnemyAnimation);
 		console.log('Collision...!');
@@ -93,7 +94,6 @@ var arrayOfEnemies = [];
 for(let i = 0; i < 5; i++){
 	arrayOfEnemies.push(new MakeEnemy());
 }
-console.log(arrayOfEnemies);
 
 // for(let i = 0; i < arrayOfEnemies.length; i += 1){
 // 	arrayOfEnemies[i].randomLeft();
@@ -109,21 +109,29 @@ console.log(arrayOfEnemies);
 
 // objEnemy.collision();
 
-function deployEnemies() {
-  var id = setInterval(frame, 1000);
-  var ii = 0;
-  function frame() {
-    if (ii > 5) {
-      clearInterval(id);
-    } else {
+// function deployEnemies() {
+//   var id = setInterval(frame, 1000);
+//   var ii = 0;
+//   function frame() {
+//     if (ii > 5) {
+//       clearInterval(id);
+//     } else {
+//     arrayOfEnemies[ii].randomLeft();
+//     arrayOfEnemies[ii].placeEnemy();
+//     $newEnemy = $('.newEnemy');
+//     arrayOfEnemies[ii].collision();
+//     ii += 1;
+//     }
+//   }
+//  }
+let ii = 0;
+ function deployEnemies() {
     arrayOfEnemies[ii].randomLeft();
     arrayOfEnemies[ii].placeEnemy();
     $newEnemy = $('.newEnemy');
     arrayOfEnemies[ii].collision();
-    ii += 1;
+    ii++;
     }
-  }
- }
 
 deployEnemies();
 
