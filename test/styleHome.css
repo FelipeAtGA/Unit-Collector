@@ -55,6 +55,17 @@ h3:hover{
 	padding: 0 10px;
 }
 
+#bottomCloud{
+	position: absolute;
+    right: -400px;
+    z-index: -5;
+    bottom: -200px;
+}
+
+.inst{
+	color: #fff;
+}
+
 .center{
 	text-align: center;
 }
