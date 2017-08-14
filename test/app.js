@@ -1,6 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOM content loaded');
 
+  const bttn = $('button');
+  var playerBanner;
+
+  bttn.click(function(){
+    event.preventDefault();
+      playerBanner = $('#playerName').val();
+      console.log(playerBanner);
+  });
+
+  const scoreDiv = $('<span>');
+  scoreDiv.addClass('score');
+  scoreDiv.html(playerBanner);
+  const $scoreBoard = $('.scoreBoard');
+  $scoreBoard.append(scoreDiv);
+
+
+
   const $player = $('#player');
   // const $enemy = $('#enemy');
   const $score = $('#score');

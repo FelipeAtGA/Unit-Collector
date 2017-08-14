@@ -34,6 +34,21 @@ h3{
     border-radius: 25px;
 }
 
+a.back{
+	text-decoration: none;
+	font-weight: 600;
+	display: inline-block;
+	float: right;
+    background-color: orange;
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 25px;
+    position: relative;
+    top: -60px;
+    right: 10px;
+}
+
 #player{
 	width:100px;
 	height: 25px;
@@ -44,6 +59,11 @@ h3{
 }
 
 #score{
+	margin: 0 10px;
+	padding: 0 10px;
+}
+
+.score{
 	margin: 0 10px;
 	padding: 0 10px;
 }

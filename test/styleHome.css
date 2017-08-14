@@ -34,29 +34,11 @@ h3{
     border-radius: 50px;
     color: brown;
     font-size: 2em;
-/*	-webkit-transition: width 2s ease, height 2s ease;
-	-moz-transition: width 2s ease, height 2s ease;
-	-o-transition: width 2s ease, height 2s ease;
-	transition: width 2s ease, height 2s ease;*/
 }
 
 h3:hover{
     background-color: purple;
     color: yellow;
-}
-
-.h3Change {
-	width: 400px;
-	height: 400px;
-}
-
-#player{
-	width:100px;
-	height: 25px;
-	background-color: yellow;
-	position: relative;
-	/*right: 50%;*/
-	left: 650px;
 }
 
 #score{
