@@ -19,6 +19,9 @@ The game will have levels of difficulty, from easiest to more difficult. This di
 There is no way to choose a level. The player has to start from level 1 and make its way up the levels on the game. Each level is timed or measured by the number of objects caught (still to be determined) so that a level can be completed, scored, and passed to the next.
 
 The player scores every time he/she catch an object, as well as when he/she goes up one level. Score history is saved so that players can see the top player.
+
+Link to game in bitballom: http://bartender-matilda-70734.bitballoon.com/
+
 ![project1 screenshot image](https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/blob/master/test/project1_game_homepageImage.png)
 
 
