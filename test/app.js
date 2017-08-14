@@ -16,11 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const $scoreBoard = $('.scoreBoard');
   $scoreBoard.append(scoreDiv);
 
-
+var stopEnemyAnimation;
+var stopPrototypeAnimationCollision;
+var intViewportHeight = window.innerHeight - 185;
+var updateScore2 = 0;
+var $score = $('#score');
 
   const $player = $('#player');
-  // const $enemy = $('#enemy');
-  const $score = $('#score');
+  var $newEnemy;
+  // const $score = $('#score');
   var $header = $('header');
   var topY = 0;
   var move = 650;
@@ -33,13 +37,41 @@ document.addEventListener('DOMContentLoaded', () => {
   var stopPrototypeAnimation;
   var updateScore = 0;
 
+class MakeEnemy{
+  constructor(){
+    this.enemy = $('<div>');
+    this.enemy.addClass('newEnemy');
+    // this.enemy.css('display', 'inline-block');
+    // this.topDown = 0;
+  }
+
+  randomLeft(){
+    // this.enemy.css('top', '-140px');
+    let left = Math.floor(Math.random() * 1200) + 1;
+    this.enemy.css('left', left + 'px');
+    let top = Math.floor(Math.random() * 500) + 1;
+    this.enemy.css('top', top + 'px');
+  }
+
+  placeEnemy(){
+    var $header = $('header');
+    $header.append(this.enemy);
+  }
+}
+
+var arrayOfEnemies = [];
+
+for(let i = 0; i < 5; i++){
+ arrayOfEnemies.push(new MakeEnemy());
+}
+
   const updatePlayer = function(){
-   requestAnim = requestAnimationFrame(updatePlayer);
+   // requestAnim = requestAnimationFrame(updatePlayer);
 
   	//getBoundingClientRect from MDN
   	//this method cannot be applied to jQuery statements
-  	// var player = document.querySelector('#player').getBoundingClientRect();
-  	// var enemy = document.querySelector('#enemy').getBoundingClientRect();
+  	var player = document.querySelector('#player').getBoundingClientRect();
+  	var enemy = document.querySelector('.newEnemy').getBoundingClientRect();
 
     if(keyMove === 39){
 	  	move += 5;
@@ -68,19 +100,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
       }
 
-  	
-  // 	if(player.left < enemy.left + enemy.width &&
-		// player.left + player.width > enemy.left &&
-		// player.top < enemy.top + enemy.height &&
-		// player.height + player.top > enemy.top){
-  // 		updateScore += 10;
-  // 		$score.html(' ' + updateScore);
-  // 		$enemy.css('display', 'none');
-  // 		// cancelAnimationFrame(requestAnim);
-  // 	    // cancelAnimationFrame(stopEnemyAnimation);
-		// // console.log('Collision...!');
-  //   }
-  	// requestAnim = requestAnimationFrame(updatePlayer);
+  	// var enemy = document.querySelector('.newEnemy').getBoundingClientRect();
+  	if(player.left < enemy.left + enemy.width &&
+		player.left + player.width > enemy.left &&
+		player.top < enemy.top + enemy.height &&
+		player.height + player.top > enemy.top){
+  		updateScore += 10;
+  		$score.html(' ' + updateScore);
+  		$newEnemy.css('display', 'none');
+      deployEnemies();
+  		// cancelAnimationFrame(requestAnim);
+  	    // cancelAnimationFrame(stopEnemyAnimation);
+		// console.log('Collision...!');
+    }
+  	requestAnim = requestAnimationFrame(updatePlayer);
   };
 
   // const updateEnemy = function(){
@@ -91,6 +124,17 @@ document.addEventListener('DOMContentLoaded', () => {
 	 //  		cancelAnimationFrame(stopEnemyAnimation);
   //  	  	}   	
   // };
+
+let ii = 0;
+ function deployEnemies() {
+    arrayOfEnemies[ii].randomLeft();
+    arrayOfEnemies[ii].placeEnemy();
+    $newEnemy = $('.newEnemy');
+    // arrayOfEnemies[ii].collision();
+    ii++;
+    }
+
+deployEnemies();
 
 
   document.addEventListener('keydown', function(event){
