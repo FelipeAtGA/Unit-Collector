@@ -67,7 +67,11 @@ Most necessary:
 
 Add-ons:
 - A screen to mark the passing from one level to the other.
-- Sound effects to signal catching, throwing, and/or game over/game begins. 
+- Sound effects to signal catching, throwing, and/or game over/game begins.
+
+### Project Presentation:
+
+https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/tree/master/test/Project1-Presentation 
 
 ### Links and Resources
 
