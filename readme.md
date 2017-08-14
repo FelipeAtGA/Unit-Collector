@@ -22,7 +22,7 @@ The player scores every time he/she catch an object, as well as when he/she goes
 
 ### Wireframe
 
-[work in progress]
+![wireframe image](https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/blob/master/test/wireframe.jpg)
 
 ### Initial thoughts on game structure
 
