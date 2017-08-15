@@ -22,12 +22,12 @@ The player scores every time he/she catch an object, as well as when he/she goes
 
 Link to game on bitballom: http://bartender-matilda-70734.bitballoon.com/
 
-![project1 screenshot image](https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/blob/master/test/project1_game_homepageImage.png)
+![project1 screenshot image](https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/blob/master/app/project1_game_homepageImage.png)
 
 
 ### Wireframe
 
-![wireframe image](https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/blob/master/test/wireframe.jpg)
+![wireframe image](https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/blob/master/app/wireframe.jpg)
 
 ### Initial thoughts on game structure
 
