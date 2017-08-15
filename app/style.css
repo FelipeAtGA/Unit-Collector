@@ -1,6 +1,6 @@
 body{
 	margin: 0;
-	background-image: url("marioLandscape.jpg");
+	background-image: url("../img/marioLandscape.jpg");
 	background-size: 100% 100%;
 }
 
@@ -67,7 +67,7 @@ h3{
 	display: inline-block;
 	width:60px;
 	height: 60px;
-	background-image: url("bomb.png");
+	background-image: url("../img/bomb.png");
 	position: relative;
 	/*top: -130px;*/
 	/*animation-name: move;*/
