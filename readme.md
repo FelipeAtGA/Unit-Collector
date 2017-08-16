@@ -1,14 +1,18 @@
 Felipe Hernandez / Aug. 09, 2017
 
-# Project 1: Game Proposal
+# Project 1: Game
 ## Arcade retro game Kaboom/Lost Luggage
-![Kaboom image](https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/blob/master/img/kaboomScreenshot.png)
+
 
 ### About my project:
+
+![project1 screenshot image](https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/blob/master/img/homescreenScreenshot.png)
 
 I developed Unit Collector as part of the first-three-week curriculum requirement for the Web Development Immersive (WDI)/ NYC Tech Talent Pipeline (TTP) Fellowship at General Assembly.
 
 I was inspired to create Unit Collector from nostalgia for arcade games and the need to create something 2D. So, I thought of one of my old-time favorite games, Kaboom.
+
+![Kaboom image](https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/blob/master/img/kaboomScreenshot.png | width=200)
 
 Kaboom is an arcade 1980s game made by Activision for Atari. The principal of the game is that a player has to catch objects falling down from the top of the screen and avoid missing a catch. Missing a catch means that the looses an opportunity.
 
@@ -17,8 +21,6 @@ Unit Collector is going to be a version/replication of that game. It will have o
 The technologies I use to develop Unit Collector are HTML forms, CSS animations, JavaScript classes, and jQuery selectors and methods.
 
 Link to game on bitballom: http://bartender-matilda-70734.bitballoon.com/
-
-![project1 screenshot image](https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/blob/master/img/project1_game_homepageImage.png)
 
 
 ### Wireframe
