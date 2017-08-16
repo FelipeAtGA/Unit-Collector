@@ -6,6 +6,6 @@ $('a').click(function() {
     width: '1000px',
     height: '1000px'
   }, 100, function() {
-    window.location.href = 'app/game.html';
+    window.location.href = 'js/game.html';
   });
 });
