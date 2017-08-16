@@ -61,7 +61,7 @@ Add-ons:
 
 ### Project Presentation:
 
-https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/tree/master/Project1-Presentation 
+![Project presentation](https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/tree/master/presentation) 
 
 ### Links and Resources
 
