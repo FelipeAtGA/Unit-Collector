@@ -12,8 +12,6 @@ I was inspired to create Unit Collector from nostalgia for arcade games and the 
 
 Kaboom is an arcade 1980s game made by Activision for Atari. The principal of the game is that a player has to catch objects falling down from the top of the screen and avoid missing a catch. Missing a catch means that the looses an opportunity.
 
-<img src="https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/blob/master/img/kaboomScreenshot.png" alt="Video game image" title="Kaboom by Activision" width="250">
-
 Unit Collector is going to be a version/replication of that game. It will have objects randomly falling from the top of the screen down, and the player has to catch these objects avoiding missing a catch. The player scores every time he/she catches an object.
 
 The technologies I use to develop Unit Collector are HTML forms, CSS animations, JavaScript classes, and jQuery selectors and methods.
@@ -86,3 +84,5 @@ https://en.wikipedia.org/wiki/Lost_Luggage_(video_game)
 
 HTML5 Canvas:
 https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API
+
+<img src="https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/blob/master/img/kaboomScreenshot.png" alt="Video game image" title="Kaboom by Activision" width="250">
