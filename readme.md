@@ -23,15 +23,6 @@ Link to game on bitballom: http://bartender-matilda-70734.bitballoon.com/
 
 ![wireframe image](https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/blob/master/img/wireframe.jpg)
 
-### Initial thoughts on game structure
-
-The graphics and images of the game will be inspired by the Super Mario Bros. game. It will be a 2D game that will be played either horizontally or vertically. The player, for example, is at the bottom of the page moving left to right catching objects that are thrown down randomly from anywhere on the top of the screen from left to right as well. Most objects have to be caught, but a few aren’t to be catch because can take points away from the player.
-
-I am thinking of using html5 canvas to draw dynamically on the screen, but I will test this to see if the technology is appropriate for the game and my skill level.
-
-I anticipate challenges at using javascript classes and objects to structure my game, yet that’s my goal.
-
-
 ### Phases of Completion
 
 Phase 0:
