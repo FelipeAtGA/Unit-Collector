@@ -10,7 +10,8 @@ I developed Unit Collector as part of the first-three-week curriculum requiremen
 
 I was inspired to create Unit Collector from nostalgia for arcade games and the need to create something 2D. So, I thought of one of my old-time favorite games, Kaboom.
 
-Kaboom is an arcade 1980s game made by Activision for Atari. The principal of the game is that a player has to catch objects falling down from the top of the screen and avoid missing a catch. Missing a catch means that the looses an opportunity.<img src="https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/blob/master/img/kaboomScreenshot.png" alt="Video game image" title="Kaboom by Activision" width="250">
+Kaboom is an arcade 1980s game made by Activision for Atari. The principal of the game is that a player has to catch objects falling down from the top of the screen and avoid missing a catch. Missing a catch means that the looses an opportunity.
+<img src="https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/blob/master/img/kaboomScreenshot.png" alt="Video game image" title="Kaboom by Activision" width="250">
 
 Unit Collector is going to be a version/replication of that game. It will have objects randomly falling from the top of the screen down, and the player has to catch these objects avoiding missing a catch. The player scores every time he/she catches an object.
 
