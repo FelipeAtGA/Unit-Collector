@@ -6,19 +6,15 @@ Felipe Hernandez / Aug. 09, 2017
 
 ### About my project:
 
-The name of my game is yet to be determine, but it will be inspired by two top selling arcade games from the 80s.
+I developed Unit Collector as part of the first-three-week curriculum requirement for the Web Development Immersive (WDI)/ NYC Tech Talent Pipeline (TTP) Fellowship at General Assembly.
 
-Kabbom is one of my old-time favorite games. It’s an arcade-1980s game made by Activision for Atari. The principal of the game is that the player have to catch objects coming down from the top of the screen and avoid missing a catch. Missing a catch means that the game is over.
+I was inspired to create Unit Collector from nostalgia for arcade games and the need to create something 2D. So, I thought of one of my old-time favorite games, Kaboom.
 
-The creators of Kabbom got their inspiration from another arcade game named Lost Luggage, where characters have to catch luggages thrown by a crazy Luggage carousel.
+Kaboom is an arcade 1980s game made by Activision for Atari. The principal of the game is that a player has to catch objects falling down from the top of the screen and avoid missing a catch. Missing a catch means that the looses an opportunity.
 
-My game is going to be a take or a version of these two games. It will have objects randomly falling from the top of the screen down (or from the left or right side of the screen), and the player has to catch them avoiding missing a catch. Missing a catch is determined by the thrown object reaching the other side of the screen.
+Unit Collector is going to be a version/replication of that game. It will have objects randomly falling from the top of the screen down, and the player has to catch these objects avoiding missing a catch. The player scores every time he/she catches an object.
 
-The game will have levels of difficulty, from easiest to more difficult. This difficulty will be expressed by how fast objects appear and fall down from the top of the screen, challenging the player to act fast.
-
-There is no way to choose a level. The player has to start from level 1 and make its way up the levels on the game. Each level is timed or measured by the number of objects caught (still to be determined) so that a level can be completed, scored, and passed to the next.
-
-The player scores every time he/she catch an object, as well as when he/she goes up one level. Score history is saved so that players can see the top player.
+The technologies I use to develop Unit Collector are HTML forms, CSS animations, JavaScript classes, and jQuery selectors and methods.
 
 Link to game on bitballom: http://bartender-matilda-70734.bitballoon.com/
 
