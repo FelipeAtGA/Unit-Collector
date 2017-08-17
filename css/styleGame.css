@@ -87,7 +87,7 @@ a.back{
 	width:60px;
 	height: 60px;
 	background-image: url("../img/bomb.png");
-	position: relative;
+	position: absolute;
 	/*top: -130px;*/
 	/*animation-name: move;*/
 	/*animation-duration: 4s;*/
