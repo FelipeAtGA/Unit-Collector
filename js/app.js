@@ -39,11 +39,12 @@ var $score = $('#score');
   var arrayOfEnemies = [];
 
 class MakeEnemy{
-  constructor(num){
+  constructor(ids){
     this.enemy = $('<div>');
     this.enemy.addClass('newEnemy');
-    this.enemy.attr('id', num);
+    this.enemy.attr('id', ids);
     this.topDown = 0;
+    this.fallvar = null;
   }
 
   randomLeft(){
@@ -62,7 +63,8 @@ class MakeEnemy{
  fall() {
   stopPrototypeAnimation = requestAnimationFrame(this.fall.bind(this));
     this.topDown += 1;
-    $newEnemy.css('top', this.topDown);
+    // console.log(this.topDown)
+    this.fallvar.css('top', this.topDown);
       if(this.topDown > intViewportHeight){
         cancelAnimationFrame(stopPrototypeAnimation);
           }
@@ -150,7 +152,8 @@ class MakeEnemy{
   // };
 
 for(let i = 0; i < 5; i++){
-  arrayOfEnemies.push(new MakeEnemy(i));
+  let ids = 'b' + i;
+  arrayOfEnemies.push(new MakeEnemy(ids));
 }
 
 // for(let i = 0; i < arrayOfEnemies.length; i += 1){
@@ -188,7 +191,7 @@ function deployEnemies(){
     } else {
       arrayOfEnemies[i].randomLeft();
       arrayOfEnemies[i].placeEnemy();
-      $newEnemy = $('#' + i);
+      arrayOfEnemies[i].fallvar = $('#b' + i); //one option: $('#' + i).addClass('test')
       arrayOfEnemies[i].fall();
       arrayOfEnemies[i].collision();
       i += 1;
