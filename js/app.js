@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // var stopEnemyAnimation;
 var stopPrototypeAnimationCollision;
-var intViewportHeight = window.innerHeight - 185;
+var intViewportHeight = window.innerHeight - 100;
 // var updateScore2 = 0;
 var $score = $('#score');
 
@@ -73,7 +73,7 @@ class MakeEnemy{
 
   collision(){
     var player = document.querySelector('#player').getBoundingClientRect();
-    var newEnemy = document.querySelector('.newEnemy').getBoundingClientRect();
+    var newEnemy = this.enemy[0].getBoundingClientRect();
 
       if(player.left < newEnemy.left + newEnemy.width &&
         player.left + player.width > newEnemy.left &&
@@ -81,7 +81,7 @@ class MakeEnemy{
         player.height + player.top > newEnemy.top){
           updateScore += 10;
           $score.html(' ' + updateScore);
-          $newEnemy.css('display', 'none');
+          this.enemy.css('display', 'none');
           // cancelAnimationFrame(requestAnim);
             // cancelAnimationFrame(stopEnemyAnimation);
         console.log('Collision...!');
@@ -186,7 +186,7 @@ function deployEnemies(){
   const set = setInterval(frame, 1000);
   let i = 0;
   function frame(){
-    if(i > 5){
+    if(i > 4){
       clearInterval(set);
     } else {
       arrayOfEnemies[i].randomLeft();
