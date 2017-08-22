@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // scoreDiv.html(playerBanner);
   // const $scoreBoard = $('.scoreBoard');
   // $scoreBoard.append(scoreDiv);
-  
+
   var stopPrototypeAnimationCollision;
   var intViewportHeight = window.innerHeight - 100;
   var $score = $('#score');
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   var arrayOfEnemies = [];
 
   class MakeEnemy{
-    onstructor(ids){
+    constructor(ids){
       this.enemy = $('<div>');
       this.enemy.addClass('newEnemy');
       this.enemy.attr('id', ids);
