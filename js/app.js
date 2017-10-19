@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // $scoreBoard.append(scoreDiv);
 
   var stopPrototypeAnimationCollision;
-  var intViewportHeight = window.innerHeight - 100;
+  var intViewportHeight = window.innerHeight - 55;
   var $score = $('#score');
 
   const $player = $('#player');
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.enemy.css('display', 'none');
           }
           stopPrototypeAnimationCollision = requestAnimationFrame(this.collision.bind(this));
-    }  
+    }
   }
 
 
