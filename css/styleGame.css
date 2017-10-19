@@ -1,7 +1,7 @@
 body{
 	margin: 0;
-	background-image: url("../img/marioLandscape.jpg");
-	background-size: 100% 100%;
+	background-image: url("../img/backgroundGame.png");
+	background-size: cover;
 }
 
 header{
@@ -20,9 +20,8 @@ main{
 
 footer{
 	width: 100%;
-	height: 82px;
-	padding: 20px 0px;
-	background-color: transparent;
+	position: absolute;
+  bottom: 0;
 }
 
 h3{
@@ -54,7 +53,7 @@ a.back{
 	height: 25px;
 	background-color: yellow;
 	position: relative;
-	/*right: 50%;*/
+	border: 5px solid darkorange;
 	left: 650px;
 }
 
