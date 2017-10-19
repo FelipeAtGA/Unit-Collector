@@ -30,19 +30,21 @@ document.addEventListener('DOMContentLoaded', () => {
   var stopPrototypeAnimation;
   var updateScore = 0;
   var arrayOfEnemies = [];
+  var left = 100;
 
   class MakeEnemy{
-    constructor(ids){
+    constructor(ids, left){
       this.enemy = $('<div>');
       this.enemy.addClass('newEnemy');
       this.enemy.attr('id', ids);
       this.topDown = 0;
       this.fallvar = null;
+      this.left = left;
     }
 
     randomLeft(){
-      let left = Math.floor(Math.random() * 1200) + 1;
-      this.enemy.css('left', left + 'px');
+      // let left = Math.floor(Math.random() * 1200) + 1;
+      this.enemy.css('left', this.left + 'px');
     }
 
     placeEnemy(){
@@ -111,11 +113,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   for(let i = 0; i < 5; i++){
     let ids = 'b' + i;
-    arrayOfEnemies.push(new MakeEnemy(ids));
+    arrayOfEnemies.push(new MakeEnemy(ids, left));
+    left += 100;
   }
 
   function deployEnemies(){
-    const set = setInterval(frame, 1000);
+    const set = setInterval(frame, 2000);
     let i = 0;
     function frame(){
       if(i > 4){
