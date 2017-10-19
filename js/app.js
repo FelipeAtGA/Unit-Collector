@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   var moveUp = 0;
   var keyMove;
   var requestAnim;
-  var intViewportWidth = window.innerWidth - 105;
+  var intViewportWidth = window.innerWidth - 125;
   var stopPrototypeAnimation;
   var updateScore = 0;
   var arrayOfEnemies = [];
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fall() {
       stopPrototypeAnimation = requestAnimationFrame(this.fall.bind(this));
-        this.topDown += 1;
+        this.topDown += 5;
         this.fallvar.css('top', this.topDown);
           if(this.topDown > intViewportHeight){
             cancelAnimationFrame(stopPrototypeAnimation);
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	  	move += 5;
 	  	$player.css('left', move);
 	  	if(move >= intViewportWidth){
-	  		move = 1340;
+	  		move = 1320;
 	  	}
   	}else if(keyMove === 37){
 	  	move -= 5;
@@ -111,17 +111,22 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
 
-  for(let i = 0; i < 5; i++){
+  for(let i = 0; i < 15; i++){
     let ids = 'b' + i;
     arrayOfEnemies.push(new MakeEnemy(ids, left));
-    left += 100;
+
+    if(left >= intViewportWidth - 100){
+      left -= 100;
+    }else{
+      left += 100;
+    }
   }
 
   function deployEnemies(){
-    const set = setInterval(frame, 2000);
+    const set = setInterval(frame, 1000);
     let i = 0;
     function frame(){
-      if(i > 4){
+      if(i > 14){
         clearInterval(set);
       } else {
         arrayOfEnemies[i].randomLeft();
