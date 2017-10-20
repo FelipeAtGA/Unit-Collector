@@ -57,6 +57,10 @@ h3:hover{
 	color: #fff;
 }
 
+.inst h2 {
+  font-size: 28px;
+}
+
 .center{
 	text-align: center;
 }
