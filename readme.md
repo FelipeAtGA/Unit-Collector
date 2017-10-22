@@ -6,17 +6,23 @@ Felipe Hernandez / Aug. 09, 2017
 
 ![project1 screenshot image](https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/blob/master/img/homescreenScreenshot.png)
 
-I developed Unit Collector as part of the first-three-week curriculum requirement for the Web Development Immersive (WDI)/ NYC Tech Talent Pipeline (TTP) Fellowship at General Assembly.
+I developed Unit Collector as part of the first-three-week curriculum requirement for the NYC Tech Talent Pipeline (TTP)/Web Development Immersive (WDI) Fellowship at General Assembly.
 
 I was inspired to create Unit Collector from nostalgia for arcade games and the need to create something 2D. So, I thought of one of my old-time favorite games, Kaboom.
 
-Kaboom is an arcade 1980s game made by Activision for Atari. The principal of the game is that a player has to catch objects falling down from the top of the screen and avoid missing a catch. Missing a catch means that the looses an opportunity.
+Kaboom is a 1980s arcade game made by Activision for Atari. The principal of the game is that a player has to catch objects falling down from the top of the screen and avoid missing a catch. Missing a catch means that to loose an opportunity.
 
 Unit Collector is going to be a version/replication of that game. It will have objects randomly falling from the top of the screen down, and the player has to catch these objects avoiding missing a catch. The player scores every time he/she catches an object.
 
-The technologies I use to develop Unit Collector are HTML forms, CSS animations, JavaScript classes, and jQuery selectors and methods.
+The technologies I use to develop Unit Collector are
+* HTML5
+* CSS3 animations
+* JavaScript objects, and
+* jQuery selectors and methods.
 
-Link to game on bitballom: http://bartender-matilda-70734.bitballoon.com/
+Unit Collector can be adapted to any theme, which is going to be, most likely, the next steps on the development of this game.
+
+Link to my project on bitballom: http://unit-collector.bitballoon.com/
 
 
 ### Wireframe
@@ -61,7 +67,7 @@ Add-ons:
 
 ### Project Presentation:
 
-![Project presentation](https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/tree/master/presentation) 
+![Project presentation](https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/tree/master/presentation)
 
 ### Links and Resources
 
