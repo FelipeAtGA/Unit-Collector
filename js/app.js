@@ -1,54 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOM content loaded');
 
-  // const bttn = $('button');
-  // var playerBanner;
+  let stopPrototypeAnimationCollision;
+  let requestAnim;
+  let stopPrototypeAnimation;
+  let keyMove;
 
-  // bttn.click(function(){
-  //   event.preventDefault();
-  //     playerBanner = $('#playerName').val();
-  //     console.log(playerBanner);
-  // });
+  const intViewportHeight = window.innerHeight - 55;
+  const $score            = $('#score');
+  const $body             = $('body');
+  const $backBttn         = $('.back');
+  const $winner           = $('#winner');
+  const $player           = $('#player');
+  const $header           = $('header');
+  const intViewportWidth  = window.innerWidth - 125;
+  const set               = setInterval(frame, 2000);
 
-  // const scoreDiv = $('<span>');
-  // scoreDiv.addClass('score');
-  // scoreDiv.html(playerBanner);
-  // const $scoreBoard = $('.scoreBoard');
-  // $scoreBoard.append(scoreDiv);
 
-  var stopPrototypeAnimationCollision;
-  var intViewportHeight = window.innerHeight - 55;
-  var $score = $('#score');
-
-  const $player = $('#player');
-  var $header = $('header');
-  var move = 650;
-  var moveUp = 0;
-  var keyMove;
-  var requestAnim;
-  var intViewportWidth = window.innerWidth - 125;
-  var stopPrototypeAnimation;
-  var updateScore = 0;
-  var arrayOfEnemies = [];
-  var left = 100;
+  let cancelPlayerMove   = true;
+  let move               = 650;
+  let moveUp             = 0;
+  let updateScore        = 0;
+  let arrayOfEnemies     = [];
 
   class MakeEnemy{
-    constructor(ids, left){
+    constructor(ids){
       this.enemy = $('<div>');
       this.enemy.addClass('newEnemy');
       this.enemy.attr('id', ids);
       this.topDown = 0;
       this.fallvar = null;
-      this.left = left;
     }
 
-    randomLeft(){
-      // let left = Math.floor(Math.random() * 1200) + 1;
-      this.enemy.css('left', this.left + 'px');
+    randomLeft() {
+      let left = Math.floor(Math.random() * 1200) + 1;
+      this.enemy.css('left', left + 'px');
     }
 
-    placeEnemy(){
-      var $header = $('header');
+    placeEnemy() {
+      const $header = $('header');
       $header.append(this.enemy);
     }
 
@@ -58,12 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
         this.fallvar.css('top', this.topDown);
           if(this.topDown > intViewportHeight){
             cancelAnimationFrame(stopPrototypeAnimation);
-              }
+          }
     }
 
-    collision(){
-      var player = document.querySelector('#player').getBoundingClientRect();
-      var newEnemy = this.enemy[0].getBoundingClientRect();
+    collision() {
+      const player = document.querySelector('#player').getBoundingClientRect();
+      const newEnemy = this.enemy[0].getBoundingClientRect();
+      const bottom = document.querySelector('#bottom').getBoundingClientRect();
 
         if(player.left < newEnemy.left + newEnemy.width &&
           player.left + player.width > newEnemy.left &&
@@ -73,6 +64,27 @@ document.addEventListener('DOMContentLoaded', () => {
             updateScore += 10;
             $score.html(' ' + updateScore);
             this.enemy.css('display', 'none');
+            if(updateScore === 150){
+              $winner.css('display', 'block');
+              $winner.click(function(){
+                location.reload();
+              })
+            }
+          }
+
+        if(bottom.left < newEnemy.left + newEnemy.width &&
+          bottom.left + bottom.width > newEnemy.left &&
+          bottom.top < newEnemy.top + newEnemy.height &&
+          bottom.height + bottom.top > newEnemy.top)
+          {
+            clearInterval(set);
+            cancelPlayerMove = false;
+            arrayOfEnemies = null; //https://stackoverflow.com/questions/17243463/delete-instance-of-a-class
+            $body.css('background-image', 'url("' + 'img/gameOver.png' + '")');
+            $backBttn.css('background-color', 'yellow');
+            $player.css('background-color', '#ccc');
+            $player.css('border-color', '#888');
+
           }
           stopPrototypeAnimationCollision = requestAnimationFrame(this.collision.bind(this));
     }
@@ -80,66 +92,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   const updatePlayer = function(){
+    if(cancelPlayerMove === true){
+      if(keyMove === 39){
+  	  	move += 8;
+  	  	$player.css('left', move);
+  	  	if(move >= intViewportWidth){
+  	  		move = 1320;
+  	  	}
+    	}else if(keyMove === 37){
+  	  	move -= 8;
+  	  	$player.css('left', move);
+  	  	if(move <= 8){
+  	  		move = 8;
+        }
+  	  	// }else if(keyMove === 38){
+      //     moveUp -= 5;
+      //     $player.css('top', moveUp);
+      //     if(moveUp < -575){
+      //       moveUp = -575;
+      //     }
+      //   }else if(keyMove === 40){
+      //     moveUp += 5;
+      //     $player.css('top', moveUp);
+      //     if(moveUp > 70){
+      //       moveUp = 70;
+      //     }
 
-    if(keyMove === 39){
-	  	move += 5;
-	  	$player.css('left', move);
-	  	if(move >= intViewportWidth){
-	  		move = 1320;
-	  	}
-  	}else if(keyMove === 37){
-	  	move -= 5;
-	  	$player.css('left', move);
-	  	if(move === 0){
-	  		move += 5;
-      }
-	  	// }else if(keyMove === 38){
-    //     moveUp -= 5;
-    //     $player.css('top', moveUp);
-    //     if(moveUp < -575){
-    //       moveUp = -575;
-    //     }
-    //   }else if(keyMove === 40){
-    //     moveUp += 5;
-    //     $player.css('top', moveUp);
-    //     if(moveUp > 70){
-    //       moveUp = 70;
-    //     }
-
-      }
+        }
+    }else{ return false }
       requestAnim = requestAnimationFrame(updatePlayer);
   };
 
 
   for(let i = 0; i < 15; i++){
     let ids = 'b' + i;
-    arrayOfEnemies.push(new MakeEnemy(ids, left));
-
-    if(left >= intViewportWidth - 100){
-      left -= 100;
-    }else{
-      left += 100;
-    }
+    arrayOfEnemies.push(new MakeEnemy(ids));
   }
 
-  function deployEnemies(){
-    const set = setInterval(frame, 1000);
-    let i = 0;
-    function frame(){
-      if(i > 14){
-        clearInterval(set);
-      } else {
-        arrayOfEnemies[i].randomLeft();
-        arrayOfEnemies[i].placeEnemy();
-        arrayOfEnemies[i].fallvar = $('#b' + i);
-        arrayOfEnemies[i].fall();
-        arrayOfEnemies[i].collision();
-        i += 1;
-      }
-    }
+  let i = 0;
+  function frame(){
+    if(i > 14){
+      clearInterval(set);
+    } else {
+      arrayOfEnemies[i].randomLeft();
+      arrayOfEnemies[i].placeEnemy();
+      arrayOfEnemies[i].fallvar = $('#b' + i);
+      arrayOfEnemies[i].fall();
+      arrayOfEnemies[i].collision();
+      i += 1;
+     }
   }
-
-  deployEnemies();
 
   document.addEventListener('keydown', function(event){
   	keyMove = event.keyCode;
