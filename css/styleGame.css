@@ -38,14 +38,14 @@ a.back{
 	font-weight: 600;
 	display: inline-block;
 	float: right;
-    background-color: orange;
-    width: 150px;
-    text-align: center;
-    padding: 10px;
-    border-radius: 25px;
-    position: relative;
-    top: -60px;
-    right: 10px;
+  background-color: orange;
+  width: 150px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 25px;
+  position: relative;
+  top: -60px;
+  right: 10px;
 }
 
 #player{
@@ -55,6 +55,19 @@ a.back{
 	position: relative;
 	border: 5px solid darkorange;
 	left: 650px;
+  margin-bottom: 50px;
+}
+
+#bottom {
+  height: 5px;
+}
+
+#winner {
+  width: 640px;
+  height: 360px;
+  margin: 0 auto;
+  display: none;
+  -webkit-animation: winner 1.5s linear;
 }
 
 #score{
@@ -65,6 +78,19 @@ a.back{
 .score{
 	margin: 0 10px;
 	padding: 0 10px;
+}
+
+.reload {
+  background-color: yellow;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  width: 150px;
+  margin: 20px auto;
+  text-align: center;
+  padding: 10px;
+  border-radius: 25px;
+
 }
 
 /*@keyframes move {
@@ -96,7 +122,13 @@ a.back{
 	margin: 0px 10px;
 }
 
-
+@-webkit-keyframes winner {
+  0% { width: 0; height: 0; }
+  40% { width: 640px; height: 360px; }
+  60% { -webkit-transform: rotate(0deg); }
+  80% { -webkit-transform: rotate(360deg); }
+  1000% { -webkit-transform: rotate(360deg); }
+}
 
 
 
