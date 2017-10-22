@@ -1,38 +1,54 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Project 1: Home</title>
-  <link rel="stylesheet" type="text/css" href="css/styleHome.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata|Droid+Sans">
-    <script
-  src="http://code.jquery.com/jquery-3.2.1.js"
-  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script>
+  <head>
+    <title>Project 1: Home</title>
+    <link rel="stylesheet" type="text/css" href="css/styleHome.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata|Droid+Sans">
+      <script
+    src="http://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
 
-</head>
-<body>
-<header>
-  <img src="img/cloud.png" width="50%">
-  <img src="img/cloud.png">
-</header>
-<main>
-  <h1 class="center shadowT">Unit Collector</h1>
-  <div class="center">
-    <img id="bmb1" class="bmb" src="img/bomb.png" width="90px"><img id="bmb2" class="bmb" src="img/bomb.png" width="90px"><img id="bmb3" class="bmb" src="img/bomb.png" width="90px">
-  </div>
-  <div class="center"><a href="javascript:void(0);"><h3 class="shadow">Start</h3></a></div>
-  <div class="inst">
-    <h2>Instrucitons:</h2>
-    <h4>* Your goal is to catch the bombs that fall down from the top of the screen</h4>
-    <h4>* You can move the player using arrow keys left and right.</h4>
-    <h4>* Press up or down arrow keys or any other key to stop moving</h4>
-    <h4>Have Fun..!</h4>
-  </div>
-</main>
-<footer>
-  <img src="img/cloud.png" width="75%">
-  <img src="img/cloud.png" id="bottomCloud" width="80%">
-</footer>
-<script type="text/javascript" src="js/homepage.js"></script>
-</body>
+  </head>
+  <body>
+
+    <header>
+      <img src="img/cloud.png" width="50%">
+      <img src="img/cloud.png">
+    </header>
+
+    <main>
+      <h1 class="center shadowT">Unit Collector</h1>
+      <div class="center">
+        <img id="bmb1" class="bmb" src="img/bomb.png" width="90px"><img id="bmb2" class="bmb" src="img/bomb.png" width="90px"><img id="bmb3" class="bmb" src="img/bomb.png" width="90px">
+      </div>
+      <div class="center"><a href="javascript:void(0);"><h3 class="shadow">Start</h3></a></div>
+      <div class="inst">
+        <h2>Instrucitons:</h2>
+        <h4>* Your goal is to catch the bombs that fall down from the top of the screen</h4>
+        <h4>* You can move the player using arrow keys left and right.</h4>
+        <h4>* Press up or down arrow keys or any other key to stop moving</h4>
+        <h4>Have Fun..!</h4>
+      </div>
+    </main>
+
+    <footer>
+      <img src="img/cloud.png" width="75%">
+      <img src="img/cloud.png" id="bottomCloud" width="80%">
+    </footer>
+
+    <script type="text/javascript" >
+      // from: http://api.jquery.com/animate/
+      $('a').click(function() {
+        $(this).animate({
+          position: 'absolute',
+          width: '1000px',
+          height: '1000px'
+        }, 100, function() {
+          window.location.href = 'game.html';
+        });
+      });
+    </script>
+
+  </body>
 </html>
