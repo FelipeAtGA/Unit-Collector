@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             updateScore += 10;
             $score.html(' ' + updateScore);
             this.enemy.css('display', 'none');
-            if(updateScore === 150){
+            if(updateScore === 50){
               $winner.css('display', 'block');
               $winner.click(function(){
                 location.reload();
@@ -124,14 +124,14 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
 
-  for(let i = 0; i < 15; i++){
+  for(let i = 0; i < 5; i++){
     let ids = 'b' + i;
     arrayOfEnemies.push(new MakeEnemy(ids));
   }
 
   let i = 0;
   function frame(){
-    if(i > 14){
+    if(i > 4){
       clearInterval(set);
     } else {
       arrayOfEnemies[i].randomLeft();
