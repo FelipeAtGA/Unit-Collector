@@ -82,4 +82,4 @@ https://en.wikipedia.org/wiki/Lost_Luggage_(video_game)
 HTML5 Canvas:
 https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API
 
-![Kaboom by Activision](https://github.com/FelipeAtGA/Unit-Collector/blob/master/img/kaboomScreenshot.png)
+<img src="https://github.com/FelipeAtGA/Unit-Collector/blob/master/img/kaboomScreenshot.png" alt="Video game image" title="Kaboom by Activision" width="250">
