@@ -27,7 +27,7 @@ Link to my project on bitballom: http://unit-collector.bitballoon.com/
 
 ### Wireframe
 
-![wireframe image](https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/blob/master/img/wireframe.jpg)
+![wireframe image](https://github.com/FelipeAtGA/Unit-Collectorblob/master/img/wireframe.jpg)
 
 ### Phases of Completion
 
