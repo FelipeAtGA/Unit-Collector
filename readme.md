@@ -4,7 +4,7 @@ Felipe Hernandez / Aug. 09, 2017
 
 ## About my project:
 
-![project1 screenshot image](https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/blob/master/img/homescreenScreenshot.png)
+![project1 screenshot image](https://github.com/FelipeAtGA/Unit-Collector/blob/master/img/homescreenScreenshot.png)
 
 I developed Unit Collector as part of the first-three-week curriculum requirement for the NYC Tech Talent Pipeline (TTP)/Web Development Immersive (WDI) Fellowship at General Assembly.
 
@@ -27,7 +27,7 @@ Link to my project on bitballom: http://unit-collector.bitballoon.com/
 
 ### Wireframe
 
-![wireframe image](https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/blob/master/img/wireframe.jpg)
+![wireframe image](https://github.com/FelipeAtGA/Unit-Collector/blob/master/img/wireframe.jpg)
 
 ### Phases of Completion
 
@@ -82,4 +82,4 @@ https://en.wikipedia.org/wiki/Lost_Luggage_(video_game)
 HTML5 Canvas:
 https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API
 
-<img src="https://git.generalassemb.ly/FelipeAtGA/Project-1---Game/blob/master/img/kaboomScreenshot.png" alt="Video game image" title="Kaboom by Activision" width="250">
+<img src="https://github.com/FelipeAtGA/Unit-Collector/blob/master/img/kaboomScreenshot.png" alt="Video game image" title="Kaboom by Activision" width="250">
